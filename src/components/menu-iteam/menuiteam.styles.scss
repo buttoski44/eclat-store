@@ -1,13 +1,14 @@
 .menu-item {
+  border-radius: 1.5em;
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  box-shadow: 12px 8px 10px gray;
 
   &:hover {
     cursor: pointer;
@@ -51,6 +52,7 @@
     background-color: white;
     opacity: 0.5;
     position: absolute;
+
     .title {
       font-weight: 400;
       letter-spacing: -1px;
