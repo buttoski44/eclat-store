@@ -2,8 +2,8 @@ import React, { Children } from "react";
 
 import "./button.styles.scss";
 
-export const Button = ({Children, ...otherprops}) =>{
+export const Button = ({children, isGoogle, ...otherprops}) =>{
     return (
-        <button className="custom-button" {...otherprops}>{Children}</button>
+        <button className={isGoogle ? `custom-button google ` : "custom-button"} {...otherprops}>{children}</button>
     )
 }
