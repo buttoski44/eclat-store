@@ -1,0 +1,12 @@
+in v6 
+
+1.switch has been replaced with Routes
+2.exact attribute has been deprecated and all paths will be defaultly exact
+
+useHistory = useNavigation
+useLocation
+useRoterMatch
+
+
+withroute     -use hooks
+history.push() - navigate
