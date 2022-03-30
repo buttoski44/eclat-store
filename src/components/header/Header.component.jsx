@@ -7,10 +7,11 @@ import {auth} from "./../../firebase/firebase.utils";
 export const Header = ({currentUser}) =>{
     return(
         <div className="header">
-            <Link className="logo-container" to="/">
+            <span className="logo-container">
                 <Logo className="logo"/>
-            </Link>
+            </span>
             <div className="options">
+                <Link className="option" to="/">HOME</Link>
                 <Link className="option" to="/shop">SHOP</Link>
                 <Link className="option" to="/contact">CONTACT</Link>
                 {
