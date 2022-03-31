@@ -1,10 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import { ReactComponent as Logo } from "./crown.svg";
+import { connect } from "react-redux";
 import "./header.styles.scss";
 import {auth} from "./../../firebase/firebase.utils";
 
-export const Header = ({currentUser}) =>{
+const Header = ({currentUser}) =>{
     return(
         <div className="header">
             <span className="logo-container">
@@ -22,3 +23,7 @@ export const Header = ({currentUser}) =>{
         
     )
 }
+
+const mapStateToProps = state =>({currentUser: state.user.currentUser})
+
+export default connect(mapStateToProps)(Header);
