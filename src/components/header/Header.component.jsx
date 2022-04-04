@@ -4,8 +4,10 @@ import "./header.styles.scss";
 import {auth} from "./../../firebase/firebase.utils";
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
+import  Carticon  from "../cart-icon/Carticon.component";
+import { Dropdown } from "../cart-dropdown/Dropdown.styles";
 
-const Header = ({currentUser}) =>{
+const Header = ({currentUser, hidden}) =>{
     return(
         <div className="header">
             <span className="logo-container">
@@ -23,12 +25,14 @@ const Header = ({currentUser}) =>{
                     className="option" 
                     to="/sign">SIGN IN</Link>
                 }
+                <Carticon className="option"/>
             </div>
+            {hidden ? null : <Dropdown/>}
         </div>
         
     )
 }
 
-const mapStateToProps = state =>({currentUser: state.user.currentUser})
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) =>({currentUser, hidden })
 
 export default connect(mapStateToProps)(Header);

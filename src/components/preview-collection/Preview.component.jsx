@@ -15,4 +15,4 @@ const Preview = ({title, items}) =>{
     )
 }
 
-export default Preview; 
+export default Preview;
