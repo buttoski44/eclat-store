@@ -2,8 +2,8 @@ import React, { Children } from "react";
 
 import "./button.styles.scss";
 
-export const Button = ({children, isGoogle, ...otherprops}) =>{
+export const Button = ({children, isGoogle,  inverted, ...otherprops}) =>{
     return (
-        <button className={isGoogle ? `custom-button google ` : "custom-button"} {...otherprops}>{children}</button>
+        <button className={`${inverted ? "inverted" : ""} ${isGoogle ? "google" : ""} custom-button` } {...otherprops}>{children}</button>
     )
 }

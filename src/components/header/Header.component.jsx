@@ -26,7 +26,7 @@ const Header = ({currentUser, hidden}) =>{
                     to="/sign">SIGN IN</Link>
                 }
                 <Carticon className="option"/>
-            </div>
+            </div>  
             {hidden ? null : <Dropdown/>}
         </div>
         
