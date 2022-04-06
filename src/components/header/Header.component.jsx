@@ -5,7 +5,7 @@ import {auth} from "./../../firebase/firebase.utils";
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
 import  Carticon  from "../cart-icon/Carticon.component";
-import { Dropdown } from "../cart-dropdown/Dropdown.styles";
+import  Dropdown  from "../cart-dropdown/Dropdown.styles";
 
 const Header = ({currentUser, hidden}) =>{
     return(
